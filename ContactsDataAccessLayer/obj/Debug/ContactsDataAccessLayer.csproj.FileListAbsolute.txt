@@ -1,0 +1,6 @@
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsDataAccessLayer\bin\Debug\ContactsDataAccessLayer.dll
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsDataAccessLayer\bin\Debug\ContactsDataAccessLayer.pdb
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsDataAccessLayer\obj\Debug\ContactsDataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsDataAccessLayer\obj\Debug\ContactsDataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsDataAccessLayer\obj\Debug\ContactsDataAccessLayer.dll
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsDataAccessLayer\obj\Debug\ContactsDataAccessLayer.pdb

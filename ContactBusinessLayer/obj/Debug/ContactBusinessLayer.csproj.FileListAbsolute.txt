@@ -1,0 +1,9 @@
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactBusinessLayer\bin\Debug\ContactBusinessLayer.dll
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactBusinessLayer\bin\Debug\ContactBusinessLayer.pdb
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactBusinessLayer\bin\Debug\ContactsDataAccessLayer.dll
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactBusinessLayer\bin\Debug\ContactsDataAccessLayer.pdb
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactBusinessLayer\obj\Debug\ContactBusinessLayer.csproj.AssemblyReference.cache
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactBusinessLayer\obj\Debug\ContactBusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactBusinessLayer\obj\Debug\ContactB.3FFCD67B.Up2Date
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactBusinessLayer\obj\Debug\ContactBusinessLayer.dll
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactBusinessLayer\obj\Debug\ContactBusinessLayer.pdb

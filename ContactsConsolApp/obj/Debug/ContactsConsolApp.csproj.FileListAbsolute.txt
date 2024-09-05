@@ -1,0 +1,12 @@
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\obj\Debug\ContactsConsolApp.csproj.AssemblyReference.cache
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\obj\Debug\ContactsConsolApp.csproj.CoreCompileInputs.cache
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\bin\Debug\ContactsConsolApp.exe.config
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\bin\Debug\ContactsConsolApp.exe
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\bin\Debug\ContactsConsolApp.pdb
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\bin\Debug\ContactBusinessLayer.dll
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\bin\Debug\ContactsDataAccessLayer.dll
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\bin\Debug\ContactBusinessLayer.pdb
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\bin\Debug\ContactsDataAccessLayer.pdb
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\obj\Debug\Contacts.68D727FE.Up2Date
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\obj\Debug\ContactsConsolApp.exe
+C:\Users\ABDELLAH\Desktop\programming\projects\Homework\C#\Contacts-Project-on-3-Tier-Architecture---Console-App\ContactsConsolApp\obj\Debug\ContactsConsolApp.pdb
