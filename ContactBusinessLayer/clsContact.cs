@@ -88,11 +88,15 @@ namespace ContactBusinessLayer
      this.Email, this.Phone, this.Address,
      this.DateOfBirth, this.CountryID, this.ImagePath);
         }
-        
+
+        public static bool DeleteContact(int ID)
+        {
+            return clsContactDataAccess.DeleteContact(ID);
+        }
 
 
 
-         public bool save()
+        public bool save()
         {
 
             if (_enCurrantMode == enMode.AddNewMode)
@@ -109,13 +113,7 @@ namespace ContactBusinessLayer
             else 
             {
 
-                if (_UpdateContact())
-                {
-                    return true;
-
-                }
-                else
-                    return false;
+                return _UpdateContact();
 
 
 

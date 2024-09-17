@@ -81,12 +81,25 @@ namespace ContactsConsolApp
 
         }
 
+        static void DeleteContact(int ID)
+
+        {
+
+            if (clsContact.DeleteContact(ID))
+
+                Console.WriteLine("Contact Deleted Successfully.");
+            else
+                Console.WriteLine("Faild to delete contact.");
+
+        }
+
         static void Main(string[] args)
         {
 
             //FindContact(1);
             //addNewContact();
-            UpdateContact(15);
+            //UpdateContact(15);
+            DeleteContact(16);
 
             Console.ReadKey();
 
