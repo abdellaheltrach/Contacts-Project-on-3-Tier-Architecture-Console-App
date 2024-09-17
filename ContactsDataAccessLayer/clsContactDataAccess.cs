@@ -67,5 +67,110 @@ namespace ContactsDataAccessLayer
             return isFound;
         }
 
+        public static int AddNewContact(string FirstName,string LastName,
+ string Email,  string Phone,  string Address,
+ DateTime DateOfBirth,  int CountryID,  string ImagePath)
+        {
+            int ContactID = -1;
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            string query = @"INSERT INTO Contacts (FirstName ,LastName ,Email  ,Phone ,Address ,DateOfBirth ,CountryID ,ImagePath)" +
+                "  VALUES (@FirstName ,@LastName  ,@Email ,@Phone  ,@Address  ,@DateOfBirth ,@CountryID ,@ImagePath) SELECT SCOPE_IDENTITY()";
+
+            SqlCommand Command = new SqlCommand(query, connection);
+            Command.Parameters.AddWithValue("@FirstName", FirstName);
+            Command.Parameters.AddWithValue("@LastName", LastName);
+            Command.Parameters.AddWithValue("@Email", Email);
+            Command.Parameters.AddWithValue("@Phone", Phone);
+            Command.Parameters.AddWithValue("@Address", Address);
+            Command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
+            Command.Parameters.AddWithValue("@CountryID", CountryID);
+            if (ImagePath == "")
+            {
+                Command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
+            }
+            else
+                Command.Parameters.AddWithValue("@ImagePath", ImagePath);
+
+
+            try
+            {
+                connection.Open();
+                object obj = Command.ExecuteScalar();
+                if (obj != null & int.TryParse(obj.ToString(), out int ID))
+                {
+                    ContactID = ID;
+                }
+
+            } 
+            catch (Exception ex) {  } 
+            finally 
+            { 
+                connection.Close();
+            }
+            return ContactID;
+        }
+
+        public static bool UpdateContact(int ID, string FirstName, string LastName,
+     string Email,  string Phone,  string Address,
+     DateTime DateOfBirth,  int CountryID,  string ImagePath)
+        {
+            bool IsUpdated= false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = @"UPDATE Contacts SET FirstName = @FirstName ,LastName = @LastName 
+              ,Email = @Email ,Phone = @Phone ,Address = @Address ,DateOfBirth = @DateOfBirth 
+              ,CountryID = @CountryID ,ImagePath = @ImagePath WHERE ContactID = @ContactID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@FirstName", FirstName);
+            command.Parameters.AddWithValue("@LastName", LastName);
+            command.Parameters.AddWithValue("@Email", Email);
+            command.Parameters.AddWithValue("@Phone", Phone);
+            command.Parameters.AddWithValue("@Address", Address);
+            command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
+            command.Parameters.AddWithValue("@CountryID", CountryID);
+            command.Parameters.AddWithValue("@ContactID", ID);
+
+
+            if (ImagePath=="")
+                command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
+
+            else
+                command.Parameters.AddWithValue("@ImagePath", ImagePath);
+
+
+            try
+            {
+                connection.Open();
+
+                int rowsAffected = command.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    IsUpdated = true;
+                }
+                else
+                {
+                    IsUpdated = false;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return IsUpdated;
+
+
+        }
+
+
+
+
+
     }
 }

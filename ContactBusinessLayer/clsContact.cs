@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 using ContactsDataAccessLayer;
 
 namespace ContactBusinessLayer
@@ -15,8 +17,28 @@ namespace ContactBusinessLayer
         public string ImagePath { set; get; }
         public int CountryID { set; get; }
 
+        private enum enMode
+        {
+            UpdateMode, AddNewMode
+        }
 
+        static private enMode _enCurrantMode ;
 
+        public clsContact()
+
+        {
+            this.FirstName = "";
+            this.LastName = "";
+            this.Email = "";
+            this.Phone = "";
+            this.Address = "";
+            this.DateOfBirth = DateTime.Now;
+            this.CountryID = -1;
+            this.ImagePath = "";
+
+            _enCurrantMode = enMode.AddNewMode;
+
+        }
 
 
         private clsContact(int ID, string FirstName, string LastName,
@@ -33,11 +55,13 @@ namespace ContactBusinessLayer
             this.CountryID = CountryID;
             this.ImagePath = ImagePath;
 
+            _enCurrantMode = enMode.UpdateMode;
+
         }
 
         public static clsContact Find(int ID)
         {
-
+            _enCurrantMode = enMode.UpdateMode;
             string FirstName = "", LastName = "", Email = "", Phone = "", Address = "", ImagePath = "";
             DateTime DateOfBirth = DateTime.Now;
             int CountryID = -1;
@@ -49,8 +73,57 @@ namespace ContactBusinessLayer
                            Email, Phone, Address, DateOfBirth, CountryID, ImagePath);
             else
                 return null;
+            
+        }
+
+        private bool _addNewContact()
+        {
+            this.ID = clsContactDataAccess.AddNewContact(this.FirstName, this.LastName, this.Email, this.Phone, this.Address, this.DateOfBirth, this.CountryID, this.ImagePath);
+            return this.ID != -1;
 
         }
+        private bool _UpdateContact()
+        {
+            return clsContactDataAccess.UpdateContact(this.ID, this.FirstName, this.LastName,
+     this.Email, this.Phone, this.Address,
+     this.DateOfBirth, this.CountryID, this.ImagePath);
+        }
+        
+
+
+
+         public bool save()
+        {
+
+            if (_enCurrantMode == enMode.AddNewMode)
+            {
+                if (_addNewContact())
+                {
+                    _enCurrantMode = enMode.UpdateMode;
+                    return true;
+
+                }
+                else
+                    return false;
+            }
+            else 
+            {
+
+                if (_UpdateContact())
+                {
+                    return true;
+
+                }
+                else
+                    return false;
+
+
+
+            }
+                
+
+        }
+
 
     }
 }
