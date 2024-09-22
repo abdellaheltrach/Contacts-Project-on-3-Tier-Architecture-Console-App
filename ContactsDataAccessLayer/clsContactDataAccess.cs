@@ -243,6 +243,41 @@ namespace ContactsDataAccessLayer
 
         }
 
+        public static bool IsExist(int ID)
+        {
+            bool IsFound= false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "SELECT IsFound = 1 FROM   Contacts where ContactID = @ContactID";
+
+            SqlCommand Command = new SqlCommand( query, connection);
+
+
+            Command.Parameters.AddWithValue ("@ContactID", ID);
+
+
+            connection.Open();
+            SqlDataReader reader = Command.ExecuteReader();
+
+
+
+            IsFound = reader.HasRows;
+
+
+            reader.Close();
+            connection.Close ();
+
+
+            return IsFound;
+
+
+
+
+
+
+        }
+
 
 
 

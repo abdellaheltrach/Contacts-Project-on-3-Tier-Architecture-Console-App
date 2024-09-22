@@ -107,6 +107,18 @@ namespace ContactsConsolApp
 
         }
 
+
+        static void IsExist(int ID)
+
+        {
+
+            if (clsContact.IsExist(ID))
+
+                Console.WriteLine("Contact whit ID  = " + ID + " is founded Successfully.");
+            else
+                Console.WriteLine("Failed to find the contact.");
+
+        }
         static void Main(string[] args)
         {
 
@@ -114,8 +126,9 @@ namespace ContactsConsolApp
             //addNewContact();
             //UpdateContact(15);
             //DeleteContact(16);
+            //ListContacts();
+            IsExist(10);
 
-            ListContacts();
 
             Console.ReadKey();
 

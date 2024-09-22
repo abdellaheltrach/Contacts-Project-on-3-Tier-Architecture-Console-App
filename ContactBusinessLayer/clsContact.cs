@@ -129,6 +129,11 @@ namespace ContactBusinessLayer
 
         }
 
+        public static bool IsExist(int ID)
+        {
+        return clsContactDataAccess.IsExist(ID);
+        }
+
 
     }
 }
