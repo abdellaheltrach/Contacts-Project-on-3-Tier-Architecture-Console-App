@@ -5,9 +5,9 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsConsolApp", "ContactsConsolApp.csproj", "{937A1D8E-31A3-41F7-8393-12AFB60B8EF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactBusinessLayer", "..\ContactBusinessLayer\ContactBusinessLayer.csproj", "{E356EC60-C2B7-4E92-9AEB-A9576C437557}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "..\ContactBusinessLayer\BusinessLayer.csproj", "{E356EC60-C2B7-4E92-9AEB-A9576C437557}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsDataAccessLayer", "..\ContactsDataAccessLayer\ContactsDataAccessLayer.csproj", "{2EB4F155-01DD-4947-9B08-3BAA00384B31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "..\ContactsDataAccessLayer\DataAccessLayer.csproj", "{2EB4F155-01DD-4947-9B08-3BAA00384B31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

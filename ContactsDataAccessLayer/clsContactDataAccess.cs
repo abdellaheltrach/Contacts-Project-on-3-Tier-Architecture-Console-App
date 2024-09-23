@@ -278,6 +278,71 @@ namespace ContactsDataAccessLayer
 
         }
 
+        public static DataTable FindContactsByCountryName(string countryName)
+        { 
+            DataTable dataTable = new DataTable();
+            SqlConnection connection = new SqlConnection (clsDataAccessSettings.ConnectionString);
+
+            string query = @"SELECT Contacts.ContactID, Contacts.FirstName, Contacts.LastName, Contacts.Email, Contacts.Phone, Contacts.Address, Contacts.DateOfBirth, Countries.CountryName, Contacts.ImagePath\r\nFROM     Contacts INNER JOIN\r\n                  Countries ON Contacts.CountryID = Countries.CountryID where  CountryName = @CountryName";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@CountryName", countryName);
+
+            try 
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                { 
+                    dataTable.Load(reader);
+                }
+
+                reader .Close();
+
+            }
+            catch { }
+            finally { 
+                connection.Close();
+            }
+
+            return dataTable ;
+        }
+        public static bool IsCountryExist(string CountryName)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "SELECT Found=1 FROM Countries WHERE CountryName = @CountryName";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@CountryName", CountryName);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+
+        }
 
 
 

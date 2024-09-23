@@ -134,6 +134,13 @@ namespace ContactBusinessLayer
         return clsContactDataAccess.IsExist(ID);
         }
 
+        public static DataTable FindContactsByCountryName(string countryName)
+        {
+            return clsContactDataAccess.FindContactsByCountryName(countryName);
+
+        }
+
+
 
     }
 }
