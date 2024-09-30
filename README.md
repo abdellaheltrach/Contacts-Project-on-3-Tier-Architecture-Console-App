@@ -30,6 +30,3 @@ Clone the repository and open the solution in your preferred IDE. The project is
 - SQL Server
 - Basic understanding of C#, ADO.NET, and object-oriented programming
 
-## Contribution
-
-Feel free to fork this repository and submit pull requests if you have improvements or additional features that align with the project’s objectives.
